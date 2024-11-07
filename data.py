@@ -1,10 +1,10 @@
 class UserData:
-    login = "Грозный"
-    password = "1530"
-    first_name = "Иван"
-    courier_no_login = {"login": "", "password": "1530", "first_name": "Иван"}
-    courier_no_password = {"login": "Грозный", "password": "", "first_name": "Иван"}
-    courier_valid_data = {"login": "Грозный", "password": "1530", "first_name": "Иван"}
+    LOGIN = "Грозный"
+    PASSWORD = "1530"
+    FIRST_NAME = "Иван"
+    COURIER_NO_LOGIN = {"login": "", "password": "1530", "first_name": "Иван"}
+    COURIER_NO_PASSWORD = {"login": "Грозный", "password": "", "first_name": "Иван"}
+    COURIER_VALID_DATA = {"login": "Грозный", "password": "1530", "first_name": "Иван"}
 
 class OrderData:
      order_data_black = {
