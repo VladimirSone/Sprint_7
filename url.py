@@ -3,3 +3,4 @@ class Url:
     URLPOSTORDERS = 'https://qa-scooter.praktikum-services.ru/api/v1/orders'
     URLPOSTCOURIER = 'https://qa-scooter.praktikum-services.ru/api/v1/courier'
     URLPOSTLOGIN = 'https://qa-scooter.praktikum-services.ru/api/v1/courier/login'
+    URLGETORDERBYNUMBER = 'https://qa-scooter.praktikum-services.ru/api/v1/orders/track'

@@ -17,11 +17,11 @@ class TestCreatingCourier:
     def test_re_creation_courier(self):
         payload = {'login': UserData.LOGIN, 'password': random_courier_password(), 'firstName': random_courier_firstname()}
         response = requests.post(Url.URLPOSTCOURIER, data=payload)
-        assert response.status_code == 409 or response.json() == {"message": "Этот логин уже используется. Попробуйте другой."}
+        assert response.status_code == 409 and {"message": "Этот логин уже используется. Попробуйте другой."}
 
     @allure.title('Проверка, что запрос возвращает ошибку, если нет всех данных: логин или пароль ')
     @allure.title('Проверка статуса кода и тела ответа')
     @pytest.mark.parametrize('user_data', [UserData.COURIER_NO_LOGIN, UserData.COURIER_NO_PASSWORD])
     def test_field_empy_courier(self, user_data):
         response = requests.post(Url.URLPOSTCOURIER, data=user_data)
-        assert response.status_code == 400 or response.json() == {"message": "Недостаточно данных для создания учетной записи"}
+        assert response.status_code == 400 and {"message": "Недостаточно данных для создания учетной записи"}
